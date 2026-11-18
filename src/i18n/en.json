@@ -154,5 +154,83 @@
     "title": "Page not found",
     "text": "It may have been moved or deleted.",
     "back": "Back to home"
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title1": "Täze Aý —",
+    "title2": "from farm to table",
+    "text": "Dayhan association «Täze oba» in Mary province. Our own farms, greenhouses and factories producing meat, dairy and confectionery.",
+    "photo": "Production photo",
+    "factoriesTitle": "Factories",
+    "factoriesText": "Five production sites in Mary province.",
+    "certTitle": "Certificates",
+    "certOpen": "Open document",
+    "principlesTitle": "How we work",
+    "galleryCta": "See how we work",
+    "galleryBtn": "Open gallery"
+  },
+  "gallery": {
+    "eyebrow": "Production and products",
+    "title": "Gallery",
+    "filter": "Filter",
+    "all": "All",
+    "open": "Open photo: {{name}}",
+    "viewer": "Photo viewer",
+    "close": "Close",
+    "prev": "Previous photo",
+    "next": "Next photo"
+  },
+  "news": {
+    "eyebrow": "Press centre",
+    "title": "News",
+    "featured": "Featured",
+    "read": "Read more",
+    "all": "All news",
+    "topics": "Topics",
+    "allTopics": "All",
+    "tags": {
+      "exhibition": "Exhibitions",
+      "products": "Products",
+      "company": "Company"
+    },
+    "more": "Show more",
+    "back": "All news",
+    "other": "More news",
+    "none": "No news on this topic yet."
+  },
+  "contacts": {
+    "eyebrow": "Contacts",
+    "title": "Let's keep in touch",
+    "text": "Contact the right department directly or write to us — we reply during working hours.",
+    "listTitle": "Departments and addresses",
+    "map": "Map · Mary province",
+    "labels": {
+      "address": "Address",
+      "dairy": "Dairy factory · 15 Seydi St, Mary",
+      "confectionery": "Confectionery",
+      "meat": "Meat and sausages",
+      "email": "Email"
+    },
+    "addressValue": "Dayhan association «Täze oba», Mary district, Mary province",
+    "formTitle": "Write to us",
+    "fields": {
+      "name": "First name",
+      "surname": "Last name",
+      "email": "Email",
+      "department": "Department",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "general": "General question",
+    "send": "Send",
+    "sending": "Sending…",
+    "sentTitle": "Message sent",
+    "sentText": "The «{{dept}}» department will contact you during working hours.",
+    "again": "Write again",
+    "errors": {
+      "name": "Enter your name (at least 2 letters)",
+      "email": "Enter a valid email",
+      "message": "The message must be at least 10 characters"
+    }
   }
 }

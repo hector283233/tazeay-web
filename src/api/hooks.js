@@ -12,3 +12,12 @@ export const useProducts = (dept) =>
 
 export const useProduct = (dept, slug) =>
   useQuery({ queryKey: ['product', dept, slug], queryFn: () => api.product(dept, slug), enabled: !!dept && !!slug })
+
+export const useNews = () =>
+  useQuery({ queryKey: ['news'], queryFn: api.news })
+
+export const useNewsItem = (slug) =>
+  useQuery({ queryKey: ['news', slug], queryFn: () => api.newsItem(slug), enabled: !!slug })
+
+export const useGallery = () =>
+  useQuery({ queryKey: ['gallery'], queryFn: api.gallery })

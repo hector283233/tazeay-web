@@ -154,5 +154,83 @@
     "title": "Sahypa tapylmady",
     "text": "Ol göçürilen ýa-da pozulan bolmagy mümkin.",
     "back": "Baş sahypa"
+  },
+  "about": {
+    "eyebrow": "Biz barada",
+    "title1": "Täze Aý —",
+    "title2": "fermadan saçaga çenli",
+    "text": "Mary welaýatyndaky «Täze oba» daýhan birleşigi. Et, süt we konditer önümlerini öndürýän öz fermalarymyz, ýyladyşhanalarymyz we zawodlarymyz.",
+    "photo": "Önümçilik suraty",
+    "factoriesTitle": "Zawodlar",
+    "factoriesText": "Mary welaýatynda bäş önümçilik meýdançasy.",
+    "certTitle": "Sertifikatlar",
+    "certOpen": "Resminamany açmak",
+    "principlesTitle": "Iş ýörelgeleri",
+    "galleryCta": "Biziň nähili işleýändigimizi görüň",
+    "galleryBtn": "Galereýany açmak"
+  },
+  "gallery": {
+    "eyebrow": "Önümçilik we önümler",
+    "title": "Galereýa",
+    "filter": "Süzgüç",
+    "all": "Ählisi",
+    "open": "Suraty açmak: {{name}}",
+    "viewer": "Surata seretmek",
+    "close": "Ýapmak",
+    "prev": "Öňki surat",
+    "next": "Indiki surat"
+  },
+  "news": {
+    "eyebrow": "Metbugat merkezi",
+    "title": "Täzelikler",
+    "featured": "Esasy",
+    "read": "Doly okamak",
+    "all": "Ähli täzelikler",
+    "topics": "Temalar",
+    "allTopics": "Ählisi",
+    "tags": {
+      "exhibition": "Sergiler",
+      "products": "Önümler",
+      "company": "Kompaniýa"
+    },
+    "more": "Ýene görkez",
+    "back": "Ähli täzelikler",
+    "other": "Beýleki täzelikler",
+    "none": "Bu tema boýunça entek täzelik ýok."
+  },
+  "contacts": {
+    "eyebrow": "Habarlaşmak",
+    "title": "Aragatnaşykda bolalyň",
+    "text": "Gerekli bölüm bilen göni habarlaşyň ýa-da bize ýazyň — iş wagtynda jogap bereris.",
+    "listTitle": "Bölümler we salgylar",
+    "map": "Karta · Mary welaýaty",
+    "labels": {
+      "address": "Salgy",
+      "dairy": "Süt zawody · Mary ş., Seýdi köç., 15",
+      "confectionery": "Konditer önümleri",
+      "meat": "Et we kolbasa önümleri",
+      "email": "Email"
+    },
+    "addressValue": "«Täze oba» daýhan birleşigi, Mary etraby, Mary welaýaty",
+    "formTitle": "Bize ýazyň",
+    "fields": {
+      "name": "Ady",
+      "surname": "Familiýasy",
+      "email": "Email",
+      "department": "Bölüm",
+      "subject": "Tema",
+      "message": "Hat"
+    },
+    "general": "Umumy sorag",
+    "send": "Ugratmak",
+    "sending": "Ugradylýar…",
+    "sentTitle": "Hat ugradyldy",
+    "sentText": "«{{dept}}» bölümi iş wagtynda siz bilen habarlaşar.",
+    "again": "Ýene ýazmak",
+    "errors": {
+      "name": "Adyňyzy giriziň (azyndan 2 harp)",
+      "email": "Dogry email giriziň",
+      "message": "Hat azyndan 10 belgiden ybarat bolmaly"
+    }
   }
 }
