@@ -22,9 +22,8 @@ export default function Home() {
     <>
       <IntroCurtain />
       <Hero />
-      <div aria-hidden="true" className="marquee-wrap mt-14 flex flex-col gap-1.5 overflow-hidden">
+      <div aria-hidden="true" className="marquee-wrap mt-14 overflow-hidden">
         <Marquee items={names} />
-        <Marquee items={names} reverse outline />
       </div>
       <main className="mx-auto max-w-[1320px] px-6">
         <DepartmentsBento />

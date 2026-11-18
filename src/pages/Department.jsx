@@ -36,9 +36,8 @@ export default function Department() {
   return (
     <div style={{ '--dept-tint': dept.tint, '--dept-soft': dept.soft }}>
       <DeptHero dept={dept} products={products} onPick={pickFromHero} />
-      <div aria-hidden="true" className="marquee-wrap mt-14 flex flex-col gap-1.5 overflow-hidden">
+      <div aria-hidden="true" className="marquee-wrap mt-14 overflow-hidden">
         <Marquee items={marqueeItems} />
-        <Marquee items={marqueeItems} reverse outline />
       </div>
       <main className="mx-auto max-w-[1320px] px-6">
         <DeptHits dept={dept} products={hits} />
