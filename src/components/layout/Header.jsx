@@ -26,7 +26,12 @@ export default function Header({ variant = 'plain' }) {
   const base = `/${lang}`
   const inDepts = pathname.startsWith(`${base}/departments`)
 
-  useEffect(() => { setOpen(false); setMobile(false) }, [pathname])
+  const [lastPath, setLastPath] = useState(pathname)
+  if (lastPath !== pathname) {
+    setLastPath(pathname)
+    setOpen(false)
+    setMobile(false)
+  }
 
   useEffect(() => {
     if (!open) return

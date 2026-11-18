@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <div className="p-3.5">
       <section aria-label={t('home.heroLabel')}
-        className="relative mx-auto flex min-h-[860px] max-w-[1412px] flex-col overflow-hidden rounded-[40px] bg-[#5A8A3E]">
+        className="relative mx-auto flex min-h-[680px] md:min-h-[860px] max-w-[1412px] flex-col overflow-hidden rounded-[40px] bg-[#5A8A3E]">
         <HeroBackground />
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#08140c]/20 via-[#08140c]/10 to-[#08140c]/50" />
         <Header variant="hero" />
@@ -41,7 +41,7 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div className="relative mt-auto flex flex-wrap items-stretch gap-6 px-7 pb-7 pt-10">
+        <div className="relative mt-auto flex flex-wrap items-stretch gap-6 px-4 pb-4 pt-10 sm:px-7 sm:pb-7">
           {/* left: text + suppliers card */}
           <div className="flex flex-[1_1_330px] flex-col justify-between gap-10">
             <motion.p {...rise(0.65)} className="max-w-[300px] text-base leading-relaxed text-white">
@@ -49,7 +49,7 @@ export default function Hero() {
             </motion.p>
             <motion.div {...rise(0.8)} className="relative max-w-[400px] rounded-[30px] bg-surface p-6 text-ink">
               <SpinBadge to={`${base}/departments`} label={t('home.catalog')} text={t('home.badge')}
-                className="absolute -right-6 -top-10" />
+                className="absolute -right-2 -top-10 sm:-right-6" />
               <h2 className="max-w-[260px] font-display text-[19px] font-medium uppercase leading-tight tracking-tight">
                 {t('home.suppliersTitle')}
               </h2>

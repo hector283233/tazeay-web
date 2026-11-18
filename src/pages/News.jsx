@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -19,6 +20,7 @@ export default function News() {
   const { data = [], isLoading } = useNews()
   const [tag, setTag] = useState('all')
   const [shown, setShown] = useState(5)
+  useSeo(t('seo.news.t'), t('seo.news.d'))
 
   if (isLoading) return <PageLoader />
   const [featured, ...rest] = data

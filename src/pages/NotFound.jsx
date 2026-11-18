@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'motion/react'
@@ -5,6 +6,7 @@ import { motion } from 'motion/react'
 export default function NotFound() {
   const { t } = useTranslation()
   const { lang = 'ru' } = useParams()
+  useSeo(t('notFound.title'))
   return (
     <main className="mx-auto flex min-h-[60vh] max-w-[720px] flex-col items-center justify-center px-6 text-center">
       <motion.div initial={{ scale: 0.6, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}

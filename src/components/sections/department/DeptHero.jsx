@@ -23,7 +23,7 @@ export default function DeptHero({ dept, products, onPick }) {
   return (
     <div className="p-3.5">
       <section aria-label={name} style={{ background: dept.tint }}
-        className="relative mx-auto flex min-h-[820px] max-w-[1412px] flex-col overflow-hidden rounded-[40px]">
+        className="relative mx-auto flex min-h-[680px] md:min-h-[820px] max-w-[1412px] flex-col overflow-hidden rounded-[40px]">
         <HeroBackground sky={palette.sky} hills={palette.hills} />
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/50" />
         <Header variant="hero" />
@@ -44,9 +44,9 @@ export default function DeptHero({ dept, products, onPick }) {
           </motion.p>
         </div>
 
-        <div className="relative mt-auto flex flex-wrap items-end gap-6 px-7 pb-7 pt-10">
+        <div className="relative mt-auto flex flex-wrap items-end gap-6 px-4 pb-4 pt-10 sm:px-7 sm:pb-7">
           <motion.div {...rise(0.7)} className="relative flex max-w-[400px] flex-[1_1_330px] flex-col gap-3.5 rounded-[30px] bg-surface p-6 text-ink">
-            <SpinBadge to={`${base}/contacts`} label={t('dept.write')} text={t('dept.badge')} className="absolute -right-5 -top-9" />
+            <SpinBadge to={`${base}/contacts`} label={t('dept.write')} text={t('dept.badge')} className="absolute -right-2 -top-9 sm:-right-5" />
             <span className="inline-flex items-center gap-2 text-[13px] text-muted">
               <span className="animate-pulse-dot size-2 rounded-full bg-primary" />{t('dept.contact')}
             </span>

@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -15,6 +16,7 @@ export default function Departments() {
   const base = `/${lang}`
   const { data = [], isLoading } = useDepartments()
   const [q, setQ] = useState('')
+  useSeo(t('seo.departments.t'), t('seo.departments.d'))
 
   const s = q.trim().toLowerCase()
   const list = data.filter((d) => !s ||

@@ -1,36 +1,43 @@
+import { lazy, Suspense } from 'react'
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import Layout from '@/app/Layout'
-import Home from '@/pages/Home'
-import Departments from '@/pages/Departments'
-import Department from '@/pages/Department'
-import Product from '@/pages/Product'
-import About from '@/pages/About'
-import Gallery from '@/pages/Gallery'
-import News from '@/pages/News'
-import NewsArticle from '@/pages/NewsArticle'
-import Contacts from '@/pages/Contacts'
-import NotFound from '@/pages/NotFound'
+import PageLoader from '@/components/ui/PageLoader'
+import ErrorPage from '@/pages/ErrorPage'
+
+const Home = lazy(() => import('@/pages/Home'))
+const Departments = lazy(() => import('@/pages/Departments'))
+const Department = lazy(() => import('@/pages/Department'))
+const Product = lazy(() => import('@/pages/Product'))
+const About = lazy(() => import('@/pages/About'))
+const Gallery = lazy(() => import('@/pages/Gallery'))
+const News = lazy(() => import('@/pages/News'))
+const NewsArticle = lazy(() => import('@/pages/NewsArticle'))
+const Contacts = lazy(() => import('@/pages/Contacts'))
+const NotFound = lazy(() => import('@/pages/NotFound'))
+
+const page = (el) => <Suspense fallback={<PageLoader />}>{el}</Suspense>
 
 const router = createBrowserRouter([
-  {path: '/', element: <Navigate to="/ru" replace/>},
+  { path: '/', element: <Navigate to="/ru" replace />, errorElement: <ErrorPage /> },
   {
     path: '/:lang',
     element: <Layout />,
-    children:[
-      { index: true, element: <Home />, handle: { heroHeader: true } },
-      {path: 'departments', element: <Departments />},
-      { path: 'departments/:deptSlug', element: <Department />, handle: { heroHeader: true } },
-      {path: 'departments/:depSlug/:productSlug', element: <Product />},
-      {path: 'about', element: <About />},
-      {path: 'news', element: <News />},
-      {path: 'gallery', element: <Gallery />},
-      {path: 'news/:newsSlug', element: <NewsArticle />},
-      {path: 'contacts', element: <Contacts />},
-      {path: '*', element: <NotFound />},
+    errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: page(<Home />), handle: { heroHeader: true } },
+      { path: 'departments', element: page(<Departments />) },
+      { path: 'departments/:deptSlug', element: page(<Department />), handle: { heroHeader: true } },
+      { path: 'departments/:deptSlug/:productSlug', element: page(<Product />) },
+      { path: 'about', element: page(<About />) },
+      { path: 'gallery', element: page(<Gallery />) },
+      { path: 'news', element: page(<News />) },
+      { path: 'news/:newsSlug', element: page(<NewsArticle />) },
+      { path: 'contacts', element: page(<Contacts />) },
+      { path: '*', element: page(<NotFound />) },
     ],
-  }
+  },
 ])
 
-export default function App(){
+export default function App() {
   return <RouterProvider router={router} />
 }

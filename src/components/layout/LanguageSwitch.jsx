@@ -11,7 +11,7 @@ export default function LanguageSwitch({className = ''}){
     return (
     <div role="group" aria-label={t('nav.language')} className={`flex rounded-full bg-bg p-[3px] ${className}`}>
       {LANGS.map((l) => (
-        <Link key={l} to={to(l)} lang={l} aria-current={l === lang ? 'true' : undefined}
+        <Link key={l} to={to(l)} lang={l === 'tm' ? 'tk' : l} aria-current={l === lang ? 'true' : undefined}
           className={`flex h-[38px] min-w-[38px] items-center justify-center rounded-full text-[13px] uppercase transition-colors
             ${l === lang ? 'bg-surface font-semibold text-ink' : 'font-medium text-muted hover:text-ink'}`}>
           {l}

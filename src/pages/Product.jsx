@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -16,10 +17,11 @@ import { weight } from '@/lib/format'
 import { Icon } from '@/icons'
 
 export default function Product() {
-  const { deptSlug, productSlug } = useParams()
+  const { lang, deptSlug, productSlug } = useParams()
   const { data: product, isLoading } = useProduct(deptSlug, productSlug)
   const { data: dept } = useDepartment(deptSlug)
   const { data: siblings = [] } = useProducts(deptSlug)
+  useSeo(product && dept ? `${tr(product.name, lang)} — ${tr(dept.name, lang)}` : null)
 
   if (isLoading || (product && !dept)) return <PageLoader />
   if (!product) return <NotFound />

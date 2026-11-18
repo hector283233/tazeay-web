@@ -6,7 +6,7 @@ const seen = () => { try { return sessionStorage.getItem('intro') === '1' } catc
 export default function IntroCurtain() {
   const [show, setShow] = useState(() => !seen())
   const finish = () => setTimeout(() => {
-    try { sessionStorage.setItem('intro', '1') } catch {}
+    try { sessionStorage.setItem('intro', '1') } catch { /* storage unavailable (private mode) */ }
     setShow(false)
   }, 450)
 

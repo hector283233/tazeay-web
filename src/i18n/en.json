@@ -232,5 +232,34 @@
       "email": "Enter a valid email",
       "message": "The message must be at least 10 characters"
     }
+  },
+  "seo": {
+    "home": {
+      "t": "Freshness, quality, Halal",
+      "d": "Täze Aý — food producer in Mary province: fish, meat, dairy and confectionery. Halal."
+    },
+    "departments": {
+      "t": "All departments",
+      "d": "14 Täze Aý departments: fish, meat, quick meals, dairy, confectionery and more."
+    },
+    "about": {
+      "t": "About us",
+      "d": "Dayhan association «Täze oba»: 200+ product types, 5 factories, 1,705 jobs."
+    },
+    "gallery": {
+      "t": "Gallery",
+      "d": "Photos of Täze Aý production and products."
+    },
+    "news": {
+      "t": "News",
+      "d": "Täze Aý news and events."
+    },
+    "contacts": {
+      "t": "Contacts",
+      "d": "Täze Aý department addresses and phone numbers, contact form."
+    }
+  },
+  "a11y": {
+    "skip": "Skip to content"
   }
 }

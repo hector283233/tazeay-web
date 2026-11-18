@@ -232,5 +232,34 @@
       "email": "Dogry email giriziň",
       "message": "Hat azyndan 10 belgiden ybarat bolmaly"
     }
+  },
+  "seo": {
+    "home": {
+      "t": "Täzelik, hil, Halal",
+      "d": "Täze Aý — Mary welaýatynda azyk önümlerini öndüriji: balyk, et, süt we konditer önümleri. Halal."
+    },
+    "departments": {
+      "t": "Ähli bölümler",
+      "d": "Täze Aý-yň 14 bölümi: balyk, et, ýarymfabrikatlar, süt we konditer önümleri we başgalar."
+    },
+    "about": {
+      "t": "Biz barada",
+      "d": "«Täze oba» daýhan birleşigi: 200+ görnüş önüm, 5 zawod, 1 705 iş orny."
+    },
+    "gallery": {
+      "t": "Galereýa",
+      "d": "Täze Aý-yň önümçiliginiň we önümleriniň suratlary."
+    },
+    "news": {
+      "t": "Täzelikler",
+      "d": "Täze Aý kompaniýasynyň täzelikleri we wakalary."
+    },
+    "contacts": {
+      "t": "Habarlaşmak",
+      "d": "Täze Aý bölümleriniň salgylary we telefonlary, habarlaşmak üçin forma."
+    }
+  },
+  "a11y": {
+    "skip": "Esasy mazmuna geçmek"
   }
 }

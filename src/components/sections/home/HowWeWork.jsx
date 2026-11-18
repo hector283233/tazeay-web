@@ -29,7 +29,7 @@ export default function HowWeWork() {
       <div className="flex flex-[1.3_1_520px] flex-col gap-5 pb-10">
         {principles.map((p, i) => (
           <article key={p.key}
-            className="sticky flex min-h-[280px] flex-col justify-between gap-8 rounded-[32px] border p-9 shadow-[0_-10px_40px_rgba(13,27,19,0.06)]"
+            className="sticky flex min-h-[280px] flex-col justify-between gap-8 rounded-[32px] border p-6 sm:p-9 shadow-[0_-10px_40px_rgba(13,27,19,0.06)]"
             style={{ top: 110 + i * 24, background: p.bg, color: p.fg, borderColor: p.line }}>
             <span className="flex items-start justify-between">
               <span className="font-display text-6xl font-medium leading-[0.9] tracking-[-0.05em]">{p.n}</span>

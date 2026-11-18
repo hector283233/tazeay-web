@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -19,6 +20,7 @@ export default function Gallery() {
   const { data = [], isLoading } = useGallery()
   const [filter, setFilter] = useState('all')
   const [open, setOpen] = useState(null)
+  useSeo(t('seo.gallery.t'), t('seo.gallery.d'))
 
   const cats = [...new Set(data.map((g) => g.cat))]
   const options = [{ value: 'all', label: t('gallery.all') }, ...cats.map((c) => ({ value: c, label: tr(deptOf(c)?.name, lang) }))]

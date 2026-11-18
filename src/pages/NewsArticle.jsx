@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'motion/react'
@@ -17,6 +18,7 @@ export default function NewsArticle() {
   const base = `/${lang}`
   const { data: item, isLoading } = useNewsItem(newsSlug)
   const { data: all = [] } = useNews()
+  useSeo(item ? tr(item.title, lang) : null, item ? tr(item.excerpt, lang) : null)
 
   if (isLoading) return <PageLoader />
   if (!item) return <NotFound />

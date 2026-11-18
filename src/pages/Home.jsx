@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+import { useSeo } from '@/hooks/useSeo'
 import { useParams } from 'react-router-dom'
 import IntroCurtain from '@/components/ui/IntroCurtain'
 import Marquee from '@/components/ui/Marquee'
@@ -12,6 +14,8 @@ import { tr } from '@/lib/tr'
 
 export default function Home() {
   const { lang } = useParams()
+  const { t } = useTranslation()
+  useSeo(t('seo.home.t'), t('seo.home.d'))
   const names = departments.map((d) => tr(d.name, lang))
 
   return (

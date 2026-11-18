@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { useParams, useSearchParams } from 'react-router-dom'
 import { useDepartment, useProducts } from '@/api/hooks'
 import Header from '@/components/layout/Header'
@@ -17,6 +18,7 @@ export default function Department() {
   const { data: products = [] } = useProducts(deptSlug)
   const [params, setParams] = useSearchParams()
   const cat = params.get('cat') || 'all'
+  useSeo(dept ? tr(dept.name, lang) : null, dept ? tr(dept.tagline, lang) : null)
 
   const setCat = (c) => setParams(c === 'all' ? {} : { cat: c }, { replace: true, preventScrollReset: true })
   const pickFromHero = (c) => {

@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -47,6 +48,7 @@ export default function Contacts() {
   const { t } = useTranslation()
   const { lang } = useParams()
   const [sentDept, setSentDept] = useState(null)
+  useSeo(t('seo.contacts.t'), t('seo.contacts.d'))
 
   const deptOptions = [
     { value: 'general', label: t('contacts.general') },
@@ -81,7 +83,7 @@ export default function Contacts() {
       <section className="mt-14 flex flex-wrap items-stretch gap-3.5">
         {/* dark contacts card */}
         <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35, duration: 0.9 }}
-          className="relative flex flex-[1_1_420px] flex-col gap-7 overflow-hidden rounded-[40px] bg-[#0D1B13] p-10 text-[#EEF2EA]">
+          className="relative flex flex-[1_1_420px] flex-col gap-7 overflow-hidden rounded-[40px] bg-[#0D1B13] p-6 text-[#EEF2EA] sm:p-10">
           <div aria-hidden="true" className="pointer-events-none absolute -right-28 -top-28 size-96 rounded-full bg-[radial-gradient(circle,rgba(200,241,105,0.22),transparent_70%)]" />
           <h2 className="relative font-display text-3xl font-medium tracking-[-0.03em]">{t('contacts.listTitle')}</h2>
           <ul className="relative flex flex-col gap-2">

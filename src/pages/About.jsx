@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'motion/react'
@@ -20,6 +21,7 @@ const principleKeys = ['raw', 'new', 'pack', 'team']
 export default function About() {
   const { t } = useTranslation()
   const { lang } = useParams()
+  useSeo(t('seo.about.t'), t('seo.about.d'))
 
   return (
     <main className="mx-auto max-w-[1320px] px-6">

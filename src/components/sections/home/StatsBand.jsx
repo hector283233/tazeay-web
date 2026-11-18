@@ -18,9 +18,9 @@ export default function StatsBand() {
       </div>
       <div className="relative grid flex-[1.3_1_480px] grid-cols-2 gap-3.5">
         {stats.map((s) => (
-          <div key={s.key} className="rounded-[26px] border border-[#23362A] bg-[#16291E] p-7">
+          <div key={s.key} className="rounded-[26px] border border-[#23362A] bg-[#16291E] p-5 sm:p-7">
             <Counter to={s.value} suffix={s.suffix}
-              className="block font-display text-[clamp(40px,5vw,60px)] font-medium leading-none tracking-[-0.05em] text-[#C8F169]" />
+              className="block font-display text-[clamp(30px,5vw,60px)] font-medium leading-none tracking-[-0.05em] text-[#C8F169]" />
             <div className="mt-3 text-[15px] text-[#C9D3C6]">{t(`home.stats.${s.key}`)}</div>
           </div>
         ))}

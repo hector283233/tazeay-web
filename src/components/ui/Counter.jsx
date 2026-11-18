@@ -8,8 +8,7 @@ export default function Counter({ to, suffix = '', duration = 1.8, delay = 0, cl
   const [value, setValue] = useState(0)
 
   useEffect(() => {
-    if (!inView) return
-    if (reduce) { setValue(to); return }
+    if (!inView || reduce) return
     const controls = animate(0, to, {
       duration, delay, ease: [0.2, 0.8, 0.2, 1],
       onUpdate: (n) => setValue(Math.round(n)),
@@ -17,5 +16,7 @@ export default function Counter({ to, suffix = '', duration = 1.8, delay = 0, cl
     return () => controls.stop()
   }, [inView, reduce, to, duration, delay])
 
-  return <span ref={ref} className={className}>{value.toLocaleString('ru-RU')}{suffix}</span>
+  const shown = reduce ? to : value
+
+  return <span ref={ref} className={className}>{shown.toLocaleString('ru-RU')}{suffix}</span>
 }
