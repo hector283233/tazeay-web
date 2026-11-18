@@ -55,7 +55,8 @@
     "allNews": "All news"
   },
   "common": {
-    "contact": "Contact us"
+    "contact": "Contact us",
+    "loading": "Loading…"
   },
   "nav": {
     "main": "Main menu",
@@ -83,5 +84,75 @@
     "all": "All departments",
     "factories": "Factories and certificates",
     "address": "Dayhan association «Täze oba», Mary district"
+  },
+  "depts": {
+    "title": "All departments",
+    "text": "Each department is responsible for its own products and runs its own page with categories.",
+    "search": "Find a department or category",
+    "find": "Search",
+    "none": "Nothing found. Try another word.",
+    "ctaEyebrow": "For wholesale clients",
+    "ctaTitle": "Contact the right department directly",
+    "ctaBtn": "Department contacts"
+  },
+  "dept": {
+    "contact": "Department contact",
+    "write": "Write to us",
+    "badge": "HALAL • TÄZE AÝ • HALAL •",
+    "categories": "product categories",
+    "catTiles": "Department categories",
+    "items_one": "{{count}} product",
+    "items_other": "{{count}} products",
+    "hitsEyebrow": "Popular",
+    "hitsTitle": "Best sellers",
+    "hit": "Hit",
+    "fullCatalog": "Full catalogue",
+    "catalog": "Catalogue",
+    "all": "All",
+    "sort": "Sort",
+    "sortDefault": "Default",
+    "sortName": "By name",
+    "empty": "No products in this category yet.",
+    "aboutEyebrow": "About the department",
+    "aboutTitle": "Quality at every stage",
+    "aboutText": "[Department description — filled in from the admin panel: production, raw materials, product features.]",
+    "photo": "Production photo",
+    "points": {
+      "halal": "Halal products",
+      "own": "Our own production in Mary province",
+      "wholesale": "Wholesale supply by agreement"
+    },
+    "others": "Other departments"
+  },
+  "product": {
+    "halal": "Halal",
+    "new": "New",
+    "desc": "[Product description — filled in from the admin panel in three languages: TM, EN, RU.]",
+    "pack": "Pack size",
+    "specs": {
+      "shelf": "Shelf life",
+      "storage": "Storage",
+      "ingredients": "Ingredients",
+      "maker": "Producer"
+    },
+    "tbd": "[to be confirmed]",
+    "makerValue": "Täze Aý, Turkmenistan",
+    "ask": "Ask about supply",
+    "related": "From this department",
+    "allDept": "Whole department",
+    "photo": "Photo {{n}} of {{total}}",
+    "showPhoto": "Show photo {{n}}",
+    "photos": "Product photos"
+  },
+  "units": {
+    "g": "g",
+    "kg": "kg",
+    "l": "l",
+    "ml": "ml"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "It may have been moved or deleted.",
+    "back": "Back to home"
   }
 }

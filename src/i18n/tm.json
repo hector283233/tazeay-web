@@ -55,7 +55,8 @@
     "allNews": "Ähli täzelikler"
   },
   "common": {
-    "contact": "Habarlaşmak"
+    "contact": "Habarlaşmak",
+    "loading": "Ýüklenýär…"
   },
   "nav": {
     "main": "Esasy menýu",
@@ -83,5 +84,75 @@
     "all": "Ähli bölümler",
     "factories": "Zawodlar we sertifikatlar",
     "address": "«Täze oba» daýhan birleşigi, Mary etraby"
+  },
+  "depts": {
+    "title": "Ähli bölümler",
+    "text": "Her bölüm öz önümlerine jogap berýär we kategoriýaly öz sahypasyny alyp barýar.",
+    "search": "Bölüm ýa-da kategoriýa gözle",
+    "find": "Gözle",
+    "none": "Hiç zat tapylmady. Başga söz bilen synanyşyň.",
+    "ctaEyebrow": "Lomaý müşderiler üçin",
+    "ctaTitle": "Gerekli bölüm bilen göni habarlaşyň",
+    "ctaBtn": "Bölümleriň aragatnaşygy"
+  },
+  "dept": {
+    "contact": "Bölümiň aragatnaşygy",
+    "write": "Ýazmak",
+    "badge": "HALAL • TÄZE AÝ • HALAL •",
+    "categories": "önüm kategoriýasy",
+    "catTiles": "Bölümiň kategoriýalary",
+    "items_one": "{{count}} haryt",
+    "items_other": "{{count}} haryt",
+    "hitsEyebrow": "Meşhur",
+    "hitsTitle": "Bölümiň iň gowulary",
+    "hit": "Meşhur",
+    "fullCatalog": "Doly katalog",
+    "catalog": "Katalog",
+    "all": "Ählisi",
+    "sort": "Tertiplemek",
+    "sortDefault": "Adaty",
+    "sortName": "Ady boýunça",
+    "empty": "Bu kategoriýada entek haryt ýok.",
+    "aboutEyebrow": "Bölüm barada",
+    "aboutTitle": "Her tapgyrda hil",
+    "aboutText": "[Bölümiň beýany — admin paneli arkaly doldurylýar.]",
+    "photo": "Önümçilik suraty",
+    "points": {
+      "halal": "Halal önümler",
+      "own": "Mary welaýatynda öz önümçiligimiz",
+      "wholesale": "Ylalaşyk boýunça lomaý üpjünçilik"
+    },
+    "others": "Beýleki bölümler"
+  },
+  "product": {
+    "halal": "Halal",
+    "new": "Täze",
+    "desc": "[Önümiň beýany — admin paneli arkaly üç dilde doldurylýar: TM, EN, RU.]",
+    "pack": "Gaplama",
+    "specs": {
+      "shelf": "Saklanyş möhleti",
+      "storage": "Saklanyş şertleri",
+      "ingredients": "Düzümi",
+      "maker": "Öndüriji"
+    },
+    "tbd": "[anyklanýar]",
+    "makerValue": "Täze Aý, Türkmenistan",
+    "ask": "Üpjünçilik barada soramak",
+    "related": "Bu bölümden",
+    "allDept": "Tutuş bölüm",
+    "photo": "Surat {{n}} / {{total}}",
+    "showPhoto": "{{n}}-nji suraty görkez",
+    "photos": "Önümiň suratlary"
+  },
+  "units": {
+    "g": "g",
+    "kg": "kg",
+    "l": "l",
+    "ml": "ml"
+  },
+  "notFound": {
+    "title": "Sahypa tapylmady",
+    "text": "Ol göçürilen ýa-da pozulan bolmagy mümkin.",
+    "back": "Baş sahypa"
   }
 }
