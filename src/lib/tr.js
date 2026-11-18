@@ -1,0 +1,1 @@
+export const tr = (field, lang) => field?.[lang] || field?.ru || '';

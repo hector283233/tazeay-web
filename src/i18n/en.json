@@ -1,0 +1,87 @@
+{
+  "home": {
+    "title": "Freshness, quality, Halal",
+    "heroLabel": "Main screen",
+    "pill": "Straight from the producer",
+    "title1": "Freshness, quality",
+    "title2": "Halal",
+    "lead": "Direct access to the best local producers. Meat, fish, fruit and much more, delivered to your door. Meet our farmers.",
+    "suppliersTitle": "Find the best suppliers",
+    "suppliersText": "Täze Aý farms and factories in one catalogue — products straight from the producer.",
+    "productTypes": "product types",
+    "badge": "FRESHNESS • QUALITY • HALAL •",
+    "catalog": "View catalogue",
+    "ourDepts": "Our departments",
+    "allN": "All 14",
+    "deptsEyebrow": "Catalogue",
+    "deptsTitle": "Departments",
+    "deptsText": "Each department is responsible for its own products and runs its own page with categories.",
+    "allDepts": "All departments",
+    "statsEyebrow": "Täze Aý in numbers",
+    "statsTitle": "Our own production in Mary province",
+    "statsText": "From farm and greenhouse to the finished product on your table.",
+    "stats": {
+      "products": "product types",
+      "factories": "factories",
+      "jobs": "jobs",
+      "departments": "departments"
+    },
+    "newEyebrow": "New",
+    "newTitle": "Try something new",
+    "newBadge": "New",
+    "howEyebrow": "About us",
+    "howTitle": "How we work",
+    "howText": "Dayhan association «Täze oba»: our own farms, greenhouses and factories for meat, dairy and confectionery.",
+    "aboutMore": "More about us",
+    "principles": {
+      "raw": {
+        "t": "Selected raw materials",
+        "d": "We work with trusted suppliers and our own farms."
+      },
+      "new": {
+        "t": "New products",
+        "d": "We regularly launch new products and improve recipes."
+      },
+      "pack": {
+        "t": "Reliable packaging",
+        "d": "Modern packaging keeps products fresh and tasty."
+      },
+      "team": {
+        "t": "Strong team",
+        "d": "Qualified specialists at every stage of production."
+      }
+    },
+    "newsTitle": "News",
+    "allNews": "All news"
+  },
+  "common": {
+    "contact": "Contact us"
+  },
+  "nav": {
+    "main": "Main menu",
+    "home": "Home",
+    "departments": "Departments",
+    "about": "About",
+    "gallery": "Gallery",
+    "news": "News",
+    "contacts": "Contacts",
+    "contact": "Contact us",
+    "search": "Search",
+    "allDepartments": "All departments and categories",
+    "count": "14 departments",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "theme": "Toggle theme",
+    "language": "Site language"
+  },
+  "footer": {
+    "cta": "Wholesale orders and partnership",
+    "about": "Food producer. Mary province, Turkmenistan.",
+    "departments": "Departments",
+    "company": "Company",
+    "contacts": "Contacts",
+    "all": "All departments",
+    "factories": "Factories and certificates",
+    "address": "Dayhan association «Täze oba», Mary district"
+  }
+}

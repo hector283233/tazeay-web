@@ -1,0 +1,49 @@
+tazeay-web/
+├── index.html
+├── package.json
+├── vite.config.js
+├── jsconfig.json
+├── .prettierrc
+└── src/
+    ├── main.jsx
+    ├── App.jsx                          ★ edit (add handle to 2 routes)
+    ├── app/
+    │   └── Layout.jsx                   ★ replace
+    ├── components/
+    │   └── layout/                      ★ new folder
+    │       ├── Logo.jsx                 ★ new
+    │       ├── LanguageSwitch.jsx       ★ new
+    │       ├── ThemeToggle.jsx          ★ new
+    │       ├── SearchBox.jsx            ★ new
+    │       ├── MegaMenu.jsx             ★ new
+    │       ├── MobileMenu.jsx           ★ new
+    │       ├── Header.jsx               ★ new
+    │       ├── Footer.jsx               ★ new
+    │       └── ScrollProgress.jsx       ★ new
+    ├── data/
+    │   └── departments.js               ★ new
+    ├── hooks/                           ★ new folder
+    │   └── useTheme.js                  ★ new
+    ├── i18n/
+    │   ├── index.js
+    │   ├── ru.json                      ★ replace
+    │   ├── en.json                      ★ replace
+    │   └── tm.json                      ★ replace
+    ├── icons/
+    │   └── index.jsx                    ★ new
+    ├── lib/                             ★ new folder
+    │   └── tr.js                        ★ new
+    ├── pages/
+    │   ├── Home.jsx                     ★ replace (temporary version)
+    │   ├── Department.jsx               ★ replace (temporary version)
+    │   ├── Departments.jsx
+    │   ├── Product.jsx
+    │   ├── About.jsx
+    │   ├── Gallery.jsx
+    │   ├── News.jsx
+    │   ├── NewsArticle.jsx
+    │   ├── Contacts.jsx
+    │   └── NotFound.jsx
+    └── styles/
+        ├── globals.css
+        └── animations.css               ★ edit (add to the end)

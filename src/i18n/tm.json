@@ -1,0 +1,87 @@
+{
+  "home": {
+    "title": "Täzelik, hil, Halal",
+    "heroLabel": "Baş ekran",
+    "pill": "Göni öndürijiden",
+    "title1": "Täzelik, hil",
+    "title2": "Halal",
+    "lead": "Iň gowy ýerli öndürijilere göni ýol. Et, balyk, miweler we başga-da köp zat öýüňize eltilýär. Daýhanlarymyz bilen tanyşyň.",
+    "suppliersTitle": "Iň gowy üpjünçileri tapyň",
+    "suppliersText": "Täze Aý-yň fermalary we zawodlary bir katalogda — önümler göni öndürijiden.",
+    "productTypes": "görnüş önüm",
+    "badge": "TÄZELIK • HIL • HALAL •",
+    "catalog": "Katalogy görmek",
+    "ourDepts": "Biziň bölümlerimiz",
+    "allN": "Ähli 14",
+    "deptsEyebrow": "Katalog",
+    "deptsTitle": "Bölümler",
+    "deptsText": "Her bölüm öz önümlerine jogap berýär we kategoriýaly öz sahypasyny alyp barýar.",
+    "allDepts": "Ähli bölümler",
+    "statsEyebrow": "Täze Aý sanlarda",
+    "statsTitle": "Mary welaýatynda öz önümçiligimiz",
+    "statsText": "Fermadan we ýyladyşhanadan saçagyňyza çenli.",
+    "stats": {
+      "products": "görnüş önüm",
+      "factories": "zawod",
+      "jobs": "iş orny",
+      "departments": "bölüm"
+    },
+    "newEyebrow": "Täze önümler",
+    "newTitle": "Täzeligi synap görüň",
+    "newBadge": "Täze",
+    "howEyebrow": "Biz barada",
+    "howTitle": "Biz nähili işleýäris",
+    "howText": "«Täze oba» daýhan birleşigi: et, süt we konditer önümleriniň öz fermalary, ýyladyşhanalary we zawodlary.",
+    "aboutMore": "Biz barada giňişleýin",
+    "principles": {
+      "raw": {
+        "t": "Saýlama çig mal",
+        "d": "Barlanan üpjünçiler we öz fermalarymyz bilen işleýäris."
+      },
+      "new": {
+        "t": "Täze önümler",
+        "d": "Yzygiderli täze önümleri çykarýarys we reseptleri kämilleşdirýäris."
+      },
+      "pack": {
+        "t": "Ygtybarly gaplama",
+        "d": "Häzirki zaman gaplama täzeligi we tagamy saklaýar."
+      },
+      "team": {
+        "t": "Güýçli topar",
+        "d": "Önümçiligiň her tapgyrynda tejribeli hünärmenler."
+      }
+    },
+    "newsTitle": "Täzelikler",
+    "allNews": "Ähli täzelikler"
+  },
+  "common": {
+    "contact": "Habarlaşmak"
+  },
+  "nav": {
+    "main": "Esasy menýu",
+    "home": "Baş sahypa",
+    "departments": "Bölümler",
+    "about": "Biz barada",
+    "gallery": "Galereýa",
+    "news": "Täzelikler",
+    "contacts": "Habarlaşmak",
+    "contact": "Habarlaşmak",
+    "search": "Gözleg",
+    "allDepartments": "Ähli bölümler we kategoriýalar",
+    "count": "14 bölüm",
+    "menu": "Menýuny açmak",
+    "close": "Menýuny ýapmak",
+    "theme": "Temany çalyşmak",
+    "language": "Saýtyň dili"
+  },
+  "footer": {
+    "cta": "Lomaý sargytlar we hyzmatdaşlyk",
+    "about": "Azyk önümlerini öndüriji. Mary welaýaty, Türkmenistan.",
+    "departments": "Bölümler",
+    "company": "Kompaniýa",
+    "contacts": "Habarlaşmak",
+    "all": "Ähli bölümler",
+    "factories": "Zawodlar we sertifikatlar",
+    "address": "«Täze oba» daýhan birleşigi, Mary etraby"
+  }
+}
