@@ -9,6 +9,8 @@ import WordReveal from '@/components/ui/WordReveal'
 import PageLoader from '@/components/ui/PageLoader'
 import { tr } from '@/lib/tr'
 import { Icon } from '@/icons'
+import Photo from '@/components/ui/Photo'
+import { deptPhotos } from '@/data/images'
 
 export default function Departments() {
   const { t } = useTranslation()
@@ -58,20 +60,25 @@ export default function Departments() {
               <motion.div key={d.slug} layout initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }} transition={{ duration: 0.6, delay: 0.3 + i * 0.04, ease: [0.2, 0.8, 0.2, 1] }}>
                 <Link to={`${base}/departments/${d.slug}`}
-                  className="tilt flex h-full min-h-[330px] flex-col justify-between gap-5 overflow-hidden rounded-[32px] p-6 text-[#0D1B13]"
-                  style={{ background: d.soft }}>
-                  <span className="flex items-start justify-between gap-3">
-                    <span className="font-display text-2xl font-medium leading-[1.1] tracking-[-0.03em]">{tr(d.name, lang)}</span>
-                    <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white">
+                  className="tilt group flex h-full flex-col overflow-hidden rounded-[32px] bg-surface text-ink">
+                  <div className="relative aspect-[16/10] overflow-hidden" style={{ background: d.soft }}>
+                    <Photo id={deptPhotos[d.slug]} w={700} className="transition-transform duration-[900ms] ease-brand group-hover:scale-110">
+                      <span className="absolute inset-0 flex items-center justify-center">
+                        <Icon name={d.icon} strokeWidth={0.9} className="size-20" style={{ color: d.tint }} />
+                      </span>
+                    </Photo>
+                    <span className="absolute right-4 top-4 flex size-11 items-center justify-center rounded-full bg-white text-[#0D1B13] transition-transform duration-300 group-hover:rotate-45">
                       <Icon name="arrow" className="size-[18px]" strokeWidth={1.8} />
                     </span>
-                  </span>
-                  <Icon name={d.icon} strokeWidth={0.9} className="tilt-icon -my-2 size-[110px] self-end" style={{ color: d.tint }} />
-                  <span className="flex flex-wrap gap-1.5">
-                    {d.categories.map((c) => (
-                      <span key={c.key} className="rounded-full bg-white/75 px-3 py-1.5 text-[13px] font-medium">{tr(c.name, lang)}</span>
-                    ))}
-                  </span>
+                  </div>
+                  <div className="flex flex-1 flex-col gap-4 p-6">
+                    <span className="font-display text-2xl font-medium leading-[1.1] tracking-[-0.03em]">{tr(d.name, lang)}</span>
+                    <span className="flex flex-wrap gap-1.5">
+                      {d.categories.map((c) => (
+                        <span key={c.key} className="rounded-full bg-bg px-3 py-1.5 text-[13px] font-medium">{tr(c.name, lang)}</span>
+                      ))}
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}

@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'motion/react'
 import Reveal from '@/components/ui/Reveal'
 import SectionHead from '@/components/ui/SectionHead'
+import Photo from '@/components/ui/Photo'
 import { departments } from '@/data/departments'
+import { deptPhotos } from '@/data/images'
 import { tr } from '@/lib/tr'
 import { Icon } from '@/icons'
 
@@ -29,21 +31,21 @@ export default function DepartmentsBento() {
             <motion.div key={d.slug} {...fadeIn(i)}
               className={big ? 'sm:col-span-2 sm:row-span-2' : wide ? 'sm:col-span-2' : ''}>
               <Link to={`${base}/departments/${d.slug}`}
-                className="tilt flex h-full flex-col justify-between overflow-hidden rounded-[30px] p-6"
-                style={{ background: big ? d.tint : d.soft, color: big ? '#FFFFFF' : '#0D1B13' }}>
-                <span className="flex items-start justify-between gap-3">
-                  <span className={`font-display font-medium leading-[1.1] tracking-[-0.03em] ${big ? 'text-3xl sm:text-[40px]' : wide ? 'text-2xl' : 'text-[19px]'}`}>
-                    {tr(d.name, lang)}
-                  </span>
-                  <span className={`flex size-[42px] shrink-0 items-center justify-center rounded-full text-[#0D1B13] ${big ? 'bg-[#C8F169]' : 'bg-white'}`}>
+                className="tilt group relative flex h-full flex-col justify-between overflow-hidden rounded-[30px] p-6 text-white"
+                style={{ background: d.tint }}>
+                <Photo id={deptPhotos[d.slug]} w={big ? 1100 : wide ? 900 : 600}
+                  className="transition-transform duration-[900ms] ease-brand group-hover:scale-110" />
+                <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/10" />
+                <span className="relative flex items-start justify-end">
+                  <span className={`flex size-[42px] items-center justify-center rounded-full text-[#0D1B13] transition-transform duration-300 group-hover:rotate-45 ${big ? 'bg-[#C8F169]' : 'bg-white'}`}>
                     <Icon name="arrow" className="size-[18px]" strokeWidth={1.8} />
                   </span>
                 </span>
-                <span className="flex items-end justify-between gap-3">
-                  <span className="max-w-[200px] text-sm leading-snug opacity-80">{tr(d.cats, lang)}</span>
-                  <Icon name={d.icon} strokeWidth={1.1}
-                    className={`tilt-icon shrink-0 ${big ? 'size-[120px] sm:size-[200px]' : wide ? 'size-[110px]' : 'size-[76px]'}`}
-                    style={{ color: big ? '#FFFFFF' : d.tint }} />
+                <span className="relative">
+                  <span className={`block font-display font-medium leading-[1.1] tracking-[-0.03em] ${big ? 'text-3xl sm:text-[44px]' : wide ? 'text-[26px]' : 'text-xl'}`}>
+                    {tr(d.name, lang)}
+                  </span>
+                  <span className="mt-2 block text-sm text-white/85">{tr(d.cats, lang)}</span>
                 </span>
               </Link>
             </motion.div>

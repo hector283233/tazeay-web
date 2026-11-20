@@ -11,6 +11,8 @@ import PageLoader from '@/components/ui/PageLoader'
 import { departments } from '@/data/departments'
 import { tr } from '@/lib/tr'
 import { Icon } from '@/icons'
+import Photo from '@/components/ui/Photo'
+import { galleryPhotos } from '@/data/images'
 
 const deptOf = (slug) => departments.find((d) => d.slug === slug)
 
@@ -30,8 +32,12 @@ export default function Gallery() {
   const visual = (g, big = false) => {
     const d = deptOf(g.cat)
     return (
-      <span aria-hidden="true" className="absolute inset-0 flex items-center justify-center" style={{ background: d?.soft }}>
-        <Icon name={d?.icon} strokeWidth={big ? 0.6 : 0.9} className={big ? 'size-40' : 'size-[72px]'} style={{ color: d?.tint, opacity: 0.6 }} />
+      <span aria-hidden="true" className="absolute inset-0" style={{ background: d?.soft }}>
+        <Photo id={galleryPhotos[g.id]} w={big ? 1600 : 700}>
+          <span className="absolute inset-0 flex items-center justify-center">
+            <Icon name={d?.icon} strokeWidth={big ? 0.6 : 0.9} className={big ? 'size-40' : 'size-[72px]'} style={{ color: d?.tint, opacity: 0.6 }} />
+          </span>
+        </Photo>
       </span>
     )
   }

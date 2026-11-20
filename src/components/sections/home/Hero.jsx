@@ -9,6 +9,8 @@ import SpinBadge from '@/components/ui/SpinBadge'
 import { departments } from '@/data/departments'
 import { tr } from '@/lib/tr'
 import { Icon } from '@/icons'
+import Photo from '@/components/ui/Photo'
+import { heroPhoto, deptPhotos } from '@/data/images'
 
 const ease = [0.2, 0.8, 0.2, 1]
 const rise = (delay) => ({
@@ -25,7 +27,7 @@ export default function Hero() {
     <div className="p-3.5">
       <section aria-label={t('home.heroLabel')}
         className="relative mx-auto flex min-h-[680px] md:min-h-[860px] max-w-[1412px] flex-col overflow-hidden rounded-[40px] bg-[#5A8A3E]">
-        <HeroBackground />
+        <HeroBackground photo={heroPhoto} />
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#08140c]/20 via-[#08140c]/10 to-[#08140c]/50" />
         <Header variant="hero" />
 
@@ -63,9 +65,9 @@ export default function Hero() {
                 <div aria-hidden="true" className="ml-auto flex">
                   {avatars.map((d, i) => (
                     <span key={d.slug}
-                      className="animate-floaty -ml-3 flex size-11 items-center justify-center rounded-full border-[3px] border-surface first:ml-0"
-                      style={{ background: d.soft, color: d.tint, animationDelay: `${i * 0.4}s` }}>
-                      <Icon name={d.icon} className="size-5" strokeWidth={1.6} />
+                      className="animate-floaty relative -ml-3 size-11 overflow-hidden rounded-full border-[3px] border-surface first:ml-0"
+                      style={{ background: d.soft, animationDelay: `${i * 0.4}s` }}>
+                      <Photo id={deptPhotos[d.slug]} w={120} />
                     </span>
                   ))}
                 </div>
@@ -87,12 +89,13 @@ export default function Hero() {
               {departments.slice(0, 8).map((d, i) => (
                 <motion.div key={d.slug} {...rise(1.1 + i * 0.07)}>
                   <Link to={`${base}/departments/${d.slug}`}
-                    className="group relative flex aspect-[1.12/1] flex-col justify-between rounded-[20px] bg-white/15 px-3.5 py-3 text-white transition duration-500 ease-brand hover:-translate-y-1 hover:bg-white/30">
-                    <span className="pr-6 text-sm font-medium leading-tight">{tr(d.name, lang)}</span>
+                    className="group relative flex aspect-[1.12/1] flex-col justify-between overflow-hidden rounded-[20px] bg-white/15 px-3.5 py-3 text-white transition duration-500 ease-brand hover:-translate-y-1">
+                    <Photo id={deptPhotos[d.slug]} w={400} className="transition-transform duration-700 ease-brand group-hover:scale-110" />
+                    <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-black/40" />
+                    <span className="relative pr-6 text-sm font-medium leading-tight">{tr(d.name, lang)}</span>
                     <Icon name="arrow" strokeWidth={2}
                       className="absolute right-3 top-3 size-[18px] -translate-x-1.5 translate-y-1.5 text-[#C8F169] opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100" />
-                    <Icon name={d.icon} strokeWidth={1.3}
-                      className="size-9 self-end transition-transform duration-500 ease-brand group-hover:-rotate-8 group-hover:scale-115" />
+                    <Icon name={d.icon} strokeWidth={1.5} className="relative size-6 self-end opacity-90" />
                   </Link>
                 </motion.div>
               ))}

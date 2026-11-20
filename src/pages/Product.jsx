@@ -15,6 +15,8 @@ import { mix } from '@/lib/color'
 import { tr } from '@/lib/tr'
 import { weight } from '@/lib/format'
 import { Icon } from '@/icons'
+import Photo from '@/components/ui/Photo'
+import { productPhoto, deptPhotos } from '@/data/images'
 
 export default function Product() {
   const { lang, deptSlug, productSlug } = useParams()
@@ -35,7 +37,14 @@ function ProductView({ product, dept, siblings }) {
   const [photo, setPhoto] = useState(0)
   const [pack, setPack] = useState(product.weights[0])
 
-  const photos = [0, 0.06, 0.12, 0.18].map((k) => mix(dept.soft, dept.tint, k))
+  const main = productPhoto(product)
+  const extra = deptPhotos[dept.slug]
+  const photos = [
+    { id: main, pos: 'center' },
+    { id: extra, pos: 'center' },
+    { id: main, pos: 'top' },
+    { id: extra, pos: 'bottom' },
+  ]
   const category = dept.categories.find((c) => c.key === product.cat)
   const related = siblings.filter((p) => p.slug !== product.slug).slice(0, 4)
   const specs = [
@@ -63,9 +72,12 @@ function ProductView({ product, dept, siblings }) {
             <AnimatePresence mode="wait">
               <motion.div key={photo} initial={{ opacity: 0, scale: 1.04 }} animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }} transition={{ duration: 0.45, ease: [0.2, 0.8, 0.2, 1] }}
-                className="absolute inset-0 flex items-center justify-center" style={{ background: photos[photo] }}>
-                <span aria-hidden="true" className="absolute aspect-square w-3/5 rounded-full bg-white/55" />
-                <Icon name={dept.icon} strokeWidth={0.55} className="animate-floaty relative size-[230px]" style={{ color: dept.tint }} />
+                className="absolute inset-0" style={{ background: dept.soft }}>
+                <Photo id={photos[photo].id} position={photos[photo].pos} w={1200} eager alt={tr(product.name, lang)}>
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <Icon name={dept.icon} strokeWidth={0.55} className="size-[230px]" style={{ color: dept.tint }} />
+                  </span>
+                </Photo>
               </motion.div>
             </AnimatePresence>
             <span className="absolute left-5 top-5 flex gap-2">
@@ -79,11 +91,13 @@ function ProductView({ product, dept, siblings }) {
             </span>
           </div>
           <div role="group" aria-label={t('product.photos')} className="grid grid-cols-4 gap-3">
-            {photos.map((bg, i) => (
+            {photos.map((ph, i) => (
               <button key={i} type="button" onClick={() => setPhoto(i)} aria-pressed={i === photo}
                 aria-label={t('product.showPhoto', { n: i + 1 })}
-                className={`aspect-square rounded-[22px] border-2 transition duration-300 hover:-translate-y-0.5 ${i === photo ? 'border-ink' : 'border-transparent'}`}
-                style={{ background: bg }} />
+                className={`relative aspect-square overflow-hidden rounded-[22px] border-2 transition duration-300 hover:-translate-y-0.5 ${i === photo ? 'border-ink' : 'border-transparent'}`}
+                style={{ background: dept.soft }}>
+                <Photo id={ph.id} position={ph.pos} w={240} />
+              </button>
             ))}
           </div>
         </div>

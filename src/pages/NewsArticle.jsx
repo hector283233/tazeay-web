@@ -11,6 +11,9 @@ import HeroBackground from '@/components/sections/HeroBackground'
 import NotFound from '@/pages/NotFound'
 import { tr } from '@/lib/tr'
 import { Icon } from '@/icons'
+// add imports:
+import Photo from '@/components/ui/Photo'
+import { pagePhotos } from '@/data/images'
 
 export default function NewsArticle() {
   const { t } = useTranslation()
@@ -45,6 +48,7 @@ export default function NewsArticle() {
 
       <ClipReveal className="mx-auto mt-12 aspect-[21/9] min-h-[260px] max-w-[1100px]">
         <HeroBackground />
+        <Photo id={pagePhotos.news} w={1800} />
       </ClipReveal>
 
       <Reveal className="mx-auto mt-14 max-w-[720px] space-y-6 text-lg leading-[1.75]">

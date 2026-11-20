@@ -1,6 +1,8 @@
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, useScroll, useTransform } from 'motion/react'
+import Photo from '@/components/ui/Photo'
+import { deptPhotos } from '@/data/images'
 import { Icon } from '@/icons'
 
 export default function DeptAbout({ dept }) {
@@ -16,14 +18,15 @@ export default function DeptAbout({ dept }) {
         initial={{ clipPath: 'inset(14% 14% 14% 14% round 48px)' }}
         whileInView={{ clipPath: 'inset(0% 0% 0% 0% round 36px)' }}
         viewport={{ once: true, amount: 0.3 }} transition={{ duration: 1.1, ease: [0.2, 0.8, 0.2, 1] }}
-        className="relative flex aspect-[5/4] flex-[1_1_460px] items-center justify-center overflow-hidden"
+        className="relative aspect-[5/4] flex-[1_1_460px] overflow-hidden"
         style={{ background: dept.soft }}>
-        <motion.div style={{ y }}>
-          <Icon name={dept.icon} strokeWidth={0.5} className="size-[220px]" style={{ color: dept.tint }} />
+        <motion.div style={{ y }} className="absolute inset-x-0 -inset-y-[60px]">
+          <Photo id={deptPhotos[dept.slug]} w={1200}>
+            <span className="absolute inset-0 flex items-center justify-center">
+              <Icon name={dept.icon} strokeWidth={0.5} className="size-[220px]" style={{ color: dept.tint }} />
+            </span>
+          </Photo>
         </motion.div>
-        <span className="absolute bottom-5 left-5 rounded-full bg-white px-3 py-1.5 text-[13px]" style={{ color: dept.tint }}>
-          {t('dept.photo')}
-        </span>
       </motion.div>
 
       <motion.div className="flex-[1_1_400px]" initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}

@@ -1,3 +1,5 @@
+import Photo from '@/components/ui/Photo'
+
 const HILLS = [
   'M0 300 C 200 240 380 280 560 250 S 900 200 1100 240 S 1320 260 1400 230 V 820 H0Z',
   'M0 380 C 260 330 420 390 700 340 S 1100 300 1400 350 V 820 H0Z',
@@ -7,6 +9,7 @@ const HILLS = [
 ]
 
 export default function HeroBackground({
+  photo,
   sky = ['#E2EED3', '#9DBF7F', '#4F7E37'],
   hills = ['#8DB36C', '#6E9A4D', '#5A8A3E', '#46762F', '#355F23'],
 }) {
@@ -25,6 +28,7 @@ export default function HeroBackground({
           {HILLS.map((d, i) => <path key={i} d={d} fill={hills[i]} />)}
         </g>
       </svg>
+      {photo && <Photo id={photo} w={1800} eager />}
     </div>
   )
 }

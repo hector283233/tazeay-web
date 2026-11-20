@@ -9,6 +9,8 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import { heroPalette } from '@/lib/color'
 import { tr } from '@/lib/tr'
 import { Icon } from '@/icons'
+// add import:
+import { deptPhotos } from '@/data/images'
 
 const ease = [0.2, 0.8, 0.2, 1]
 const rise = (delay) => ({ initial: { opacity: 0, y: 32 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.9, delay, ease } })
@@ -24,7 +26,7 @@ export default function DeptHero({ dept, products, onPick }) {
     <div className="p-3.5">
       <section aria-label={name} style={{ background: dept.tint }}
         className="relative mx-auto flex min-h-[680px] md:min-h-[820px] max-w-[1412px] flex-col overflow-hidden rounded-[40px]">
-        <HeroBackground sky={palette.sky} hills={palette.hills} />
+                <HeroBackground sky={palette.sky} hills={palette.hills} photo={deptPhotos[dept.slug]} />
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/50" />
         <Header variant="hero" />
 

@@ -10,6 +10,9 @@ import HeroBackground from '@/components/sections/HeroBackground'
 import { factories, certificates } from '@/data/content'
 import { tr } from '@/lib/tr'
 import { Icon } from '@/icons'
+// add imports:
+import Photo from '@/components/ui/Photo'
+import { pagePhotos } from '@/data/images'
 
 const statCards = [
   { key: 'products', value: 200, suffix: '+', box: 'bg-[#C8F169] text-[#0D1B13]', label: 'text-[#0D1B13]' },
@@ -29,6 +32,7 @@ export default function About() {
 
       <ClipReveal className="mt-16 aspect-[21/8.5] min-h-[260px]">
         <HeroBackground />
+        <Photo id={pagePhotos.about} w={1800} />
         <span className="absolute bottom-[74px] left-6 rounded-full bg-white px-3.5 py-2 text-[13px] text-[#0D1B13]">{t('about.photo')}</span>
       </ClipReveal>
 

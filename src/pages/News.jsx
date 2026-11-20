@@ -12,6 +12,9 @@ import Reveal from '@/components/ui/Reveal'
 import HeroBackground from '@/components/sections/HeroBackground'
 import { tr } from '@/lib/tr'
 import { Icon } from '@/icons'
+// add imports:
+import Photo from '@/components/ui/Photo'
+import { pagePhotos } from '@/data/images'
 
 export default function News() {
   const { t } = useTranslation()
@@ -40,6 +43,7 @@ export default function News() {
           className="mt-12 flex flex-wrap items-stretch gap-3.5">
           <ClipReveal className="min-h-[420px] flex-[1.3_1_520px]">
             <HeroBackground />
+            <Photo id={pagePhotos.news} w={1400} />
             <span className="absolute left-5 top-[70px] rounded-full bg-[#C8F169] px-3.5 py-1.5 text-[13px] font-semibold text-[#0D1B13]">{t('news.featured')}</span>
           </ClipReveal>
           <div className="flex flex-[1_1_380px] flex-col justify-between gap-7 rounded-[36px] bg-surface p-10">
