@@ -8,7 +8,7 @@ export const products = [
   p('fish', 'fresh', 'silver-carp-fresh', 'Толстолобик свежий', 'Fresh silver carp', ['1kg']),
   p('fish', 'frozen', 'zander-frozen', 'Судак замороженный', 'Frozen zander', ['1kg']),
   p('fish', 'frozen', 'mackerel-frozen', 'Скумбрия замороженная', 'Frozen mackerel', ['500g']),
-  p('fish', 'fillet', 'zander-fillet', 'Филе судака', 'Zander fillet', ['300g', '500g', '1kg'], { hit: true }),
+  p('fish', 'fillet', 'zander-fillet', 'Филе судака', 'Zander fillet', ['300g', '500g', '1kg'], { hit: true, layout: 'gallery' }),
   p('fish', 'fillet', 'silver-carp-fillet', 'Филе толстолобика', 'Silver carp fillet', ['500g']),
   p('fish', 'smoked', 'mackerel-cold-smoked', 'Скумбрия холодного копчения', 'Cold-smoked mackerel', ['300g'], { hit: true }),
   p('fish', 'smoked', 'carp-hot-smoked', 'Сазан горячего копчения', 'Hot-smoked carp', ['400g']),

@@ -142,7 +142,25 @@
     "allDept": "Whole department",
     "photo": "Photo {{n}} of {{total}}",
     "showPhoto": "Show photo {{n}}",
-    "photos": "Product photos"
+    "photos": "Product photos",
+    "about": "About the product",
+    "chars": "Specifications",
+    "allChars": "All specifications",
+    "per100": "Per 100 grams of product",
+    "short": "[Short product description — one or two lines from the admin panel.]",
+    "tabs": {
+      "desc": "Description",
+      "chars": "Specifications",
+      "comp": "Ingredients"
+    },
+    "quick": {
+      "openPage": "Open product page",
+      "more": "Details",
+      "close": "Close",
+      "prev": "Previous product",
+      "next": "Next product",
+      "counter": "{{n}} of {{total}}"
+    }
   },
   "units": {
     "g": "g",

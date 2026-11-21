@@ -1,6 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
 import { api } from './mock'
 
+export const useSettings = () =>
+  useQuery({ queryKey: ['settings'], queryFn: api.settings, staleTime: Infinity })
+
 export const useDepartments = () =>
   useQuery({ queryKey: ['departments'], queryFn: api.departments })
 

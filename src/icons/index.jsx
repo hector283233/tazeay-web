@@ -26,6 +26,8 @@ const paths = {
   box: 'M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10',
   team: 'M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 11a3 3 0 1 0 0-6M3 20c0-3 3-5 6-5s6 2 6 5M15 15c3 0 6 2 6 5',
   check: 'M5 12l5 5 9-10',
+  snow: 'M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1L19.1 4.9M9 3l3 3 3-3M9 21l3-3 3 3M3 9l3 3-3 3M21 9l-3 3 3 3',
+  calendar: 'M4 6h16v14H4zM4 10h16M8 3v5M16 3v5',
 }
 
 export function Icon({ name, className = 'size-5', strokeWidth = 1.7, ...rest }) {

@@ -6,6 +6,8 @@ import { LANGS } from '@/i18n'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import ScrollProgress from '@/components/layout/ScrollProgress'
+import QuickViewHost from '@/components/product/quickview/QuickViewHost'
+import DevPreviewSwitcher from '@/components/dev/DevPreviewSwitcher'
 
 const htmlLang = (l) => (l === 'tm' ? 'tk' : l)
 
@@ -37,6 +39,8 @@ export default function Layout() {
         </div>
         <Footer />
       </div>
+      <QuickViewHost />
+      {import.meta.env.DEV && <DevPreviewSwitcher />}
       <ScrollRestoration />
     </MotionConfig>
   )

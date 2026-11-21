@@ -5,14 +5,25 @@ import { productPhoto } from '@/data/images'
 import { tr } from '@/lib/tr'
 import { weight } from '@/lib/format'
 import { Icon } from '@/icons'
+import { useProductDisplay } from '@/hooks/useProductDisplay'
+import { useQuickView } from '@/hooks/useQuickView'
 
 export default function ProductCard({ product, dept }) {
   const { t } = useTranslation()
   const { lang } = useParams()
   const category = dept.categories.find((c) => c.key === product.cat)
+  const { quickView } = useProductDisplay()
+  const { open } = useQuickView()
+
+  // plain click opens the quick view; Ctrl/⌘-click or "off" in the admin opens the full page
+  const onClick = (e) => {
+    if (quickView === 'off' || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+    e.preventDefault()
+    open(product)
+  }
 
   return (
-    <Link to={`/${lang}/departments/${product.dept}/${product.slug}`} className="group flex flex-col gap-3.5">
+    <Link to={`/${lang}/departments/${product.dept}/${product.slug}`} onClick={onClick} className="group flex flex-col gap-3.5">
       <div className="relative aspect-[1/1.08] overflow-hidden rounded-[28px] bg-surface transition-all duration-500 ease-brand group-hover:-translate-y-1.5 group-hover:rounded-[40px] group-hover:shadow-[0_24px_48px_rgba(13,27,19,0.12)]">
         <Photo id={productPhoto(product)} w={600} className="transition-transform duration-[900ms] ease-brand group-hover:scale-110">
           <span className="absolute inset-0 flex items-center justify-center">

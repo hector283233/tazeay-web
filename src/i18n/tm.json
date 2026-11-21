@@ -142,7 +142,25 @@
     "allDept": "Tutuş bölüm",
     "photo": "Surat {{n}} / {{total}}",
     "showPhoto": "{{n}}-nji suraty görkez",
-    "photos": "Önümiň suratlary"
+    "photos": "Önümiň suratlary",
+    "about": "Önüm barada",
+    "chars": "Häsiýetnamasy",
+    "allChars": "Ähli häsiýetnamasy",
+    "per100": "Önümiň 100 gramyna",
+    "short": "[Önümiň gysga beýany — admin panelinden bir-iki setir.]",
+    "tabs": {
+      "desc": "Beýany",
+      "chars": "Häsiýetnamasy",
+      "comp": "Düzümi"
+    },
+    "quick": {
+      "openPage": "Önümiň sahypasyny açmak",
+      "more": "Giňişleýin",
+      "close": "Ýapmak",
+      "prev": "Öňki önüm",
+      "next": "Indiki önüm",
+      "counter": "{{n}} / {{total}}"
+    }
   },
   "units": {
     "g": "g",
