@@ -12,12 +12,12 @@ export default function ProductCard({ product, dept }) {
   const { t } = useTranslation()
   const { lang } = useParams()
   const category = dept.categories.find((c) => c.key === product.cat)
-  const { quickView } = useProductDisplay()
+  const { quickViewFor } = useProductDisplay()
   const { open } = useQuickView()
 
   // plain click opens the quick view; Ctrl/⌘-click or "off" in the admin opens the full page
   const onClick = (e) => {
-    if (quickView === 'off' || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+    if (quickViewFor(dept) === 'off' || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
     e.preventDefault()
     open(product)
   }

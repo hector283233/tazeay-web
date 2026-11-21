@@ -4,5 +4,9 @@ export const siteSettings = {
 }
 
 export const departmentLayouts = {
-  chocolate: 'story',
+  dairy: 'story',
+}
+
+export const departmentQuickViews = {
+  fish: 'drawer',
 }

@@ -9,12 +9,13 @@ import QuickViewDrawer from './QuickViewDrawer'
 // Shows the quick view chosen in the admin panel when the address has ?view=dept/product
 export default function QuickViewHost() {
   const { view, go, close } = useQuickView()
-  const { quickView } = useProductDisplay()
+  const { quickViewFor } = useProductDisplay()
   const [deptSlug, slug] = (view ?? '').split('/')
   const { data: product } = useProduct(deptSlug, slug)
   const { data: dept } = useDepartment(deptSlug)
   const { data: siblings = [] } = useProducts(deptSlug)
 
+  const quickView = quickViewFor(dept) // this department's choice, or the site default
   const open = Boolean(view && quickView !== 'off' && product && dept)
   const index = product ? siblings.findIndex((p) => p.slug === product.slug) : -1
   const total = siblings.length

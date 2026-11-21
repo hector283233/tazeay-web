@@ -9,5 +9,6 @@ export function useProductDisplay() {
   return {
     layoutFor: (product, dept) => pickLayout(product, dept, settings, preview.layout),
     quickView: pickQuickView(settings, preview.quickView),
+    quickViewFor: (dept) => pickQuickView(dept, settings, preview.quickView),
   }
 }

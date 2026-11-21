@@ -11,5 +11,8 @@ export const pickLayout = (product, dept, settings, override) =>
   valid(PRODUCT_LAYOUTS, settings?.productLayout) ||
   'classic'
 
-export const pickQuickView = (settings, override) =>
-  valid(QUICK_VIEWS, override) || valid(QUICK_VIEWS, settings?.quickView) || 'modal'
+export const pickQuickView = (dept, settings, override) =>
+  valid(QUICK_VIEWS, override) ||
+  valid(QUICK_VIEWS, dept?.quickView) ||
+  valid(QUICK_VIEWS, settings?.quickView) ||
+  'modal'

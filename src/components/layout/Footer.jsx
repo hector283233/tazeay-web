@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { departments } from '@/data/departments'
 import { tr } from '@/lib/tr'
 import { Icon } from '@/icons'
+import Logo from './Logo'
 
 export default function Footer() {
   const { lang } = useParams()
@@ -27,8 +28,9 @@ export default function Footer() {
 
         <div className="relative grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-10 py-12">
           <div>
-            <span className="inline-flex h-[46px] w-20 items-center justify-center rounded-[50%] bg-[#C8102E] shadow-[inset_0_0_0_2px_#F4B400]">
-              <span className="text-[15px] font-bold italic text-[#FFD23F]">Täze Aý</span>
+            <span className="inline-flex h-[46px] w-20 items-center justify-center">
+              {/* <span className="text-[15px] font-bold italic text-[#FFD23F]">Täze Aý</span> */}
+              <Logo />
             </span>
             <p className="mt-4 max-w-60 text-[15px] leading-relaxed text-[#A7B3A9]">{t('footer.about')}</p>
             <div className="mt-4 flex gap-2">
@@ -71,6 +73,7 @@ export default function Footer() {
         <div aria-hidden className="relative -mx-10 -mb-6 select-none whitespace-nowrap text-center font-display text-[clamp(80px,15vw,220px)] font-semibold leading-[0.8] tracking-[-0.05em] text-[#16291E]">
           TÄZE AÝ
         </div>
+        {/* <Logo /> */}
         <div className="relative flex flex-wrap justify-between gap-3 border-t border-[#23362A] pb-7 pt-5 text-sm text-[#A7B3A9]">
           <span>© {new Date().getFullYear()} Täze Aý</span>
           <span>TM · EN · RU</span>
